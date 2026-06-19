@@ -19,40 +19,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-st.markdown("""
-<style>
-
-/* Menu superior direito */
-[data-testid="stToolbar"] {
-    display: none;
-}
-
-/* Rodapé */
-footer {
-    visibility: hidden;
-}
-
-/* "Manage app" */
-[data-testid="stStatusWidget"] {
-    display: none;
-}
-            
-/* Botão da sidebar na lateral esquerda, meio da tela */
-[data-testid="collapsedControl"] {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    z-index: 999999;
-
-/* Espaço superior */
-.block-container {
-    padding-top: 1rem;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
 if "logado" not in st.session_state:
     st.session_state["logado"] = False
 
