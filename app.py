@@ -16,16 +16,11 @@ st.set_page_config(
     page_title="Sistema de Chaves",
     page_icon="🔑",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
 st.markdown("""
 <style>
-
-/* Esconde botão de recolher/expandir sidebar */
-[data-testid="collapsedControl"] {
-    display: none;
-}
 
 /* Menu superior direito */
 [data-testid="stToolbar"] {
@@ -41,10 +36,18 @@ footer {
 [data-testid="stStatusWidget"] {
     display: none;
 }
+            
+/* Botão da sidebar na lateral esquerda, meio da tela */
+[data-testid="collapsedControl"] {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 999999;
 
-/* Header Streamlit */
-header {
-    visibility: hidden;
+/* Espaço superior */
+.block-container {
+    padding-top: 1rem;
 }
 
 </style>
