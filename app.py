@@ -16,7 +16,7 @@ st.set_page_config(
     page_title="Sistema de Chaves",
     page_icon="🔑",
     layout="wide",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="expanded"
 )
 
 if "logado" not in st.session_state:
