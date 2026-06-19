@@ -42,11 +42,6 @@ header {
     visibility: hidden;
 }
 
-/* Espaço superior */
-.block-container {
-    padding-top: 1rem;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
