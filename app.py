@@ -19,6 +19,30 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+st.markdown("""
+<style>
+
+/* Barra superior personalizada */
+.barra-topo {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 50px;
+    background-color: black;
+    z-index: 999999;
+}
+
+/* Espaço para não cobrir o conteúdo */
+.block-container {
+    padding-top: 60px;
+}
+
+</style>
+
+<div class="barra-topo"></div>
+""", unsafe_allow_html=True)
+
 if "logado" not in st.session_state:
     st.session_state["logado"] = False
 
