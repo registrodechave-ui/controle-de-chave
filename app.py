@@ -19,6 +19,37 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+st.markdown("""
+<style>
+
+/* Menu superior direito */
+[data-testid="stToolbar"] {
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    visibility: hidden;
+}
+
+/* "Manage app" */
+[data-testid="stStatusWidget"] {
+    display: none;
+}
+
+/* Header Streamlit */
+header {
+    visibility: hidden;
+}
+
+/* Espaço superior */
+.block-container {
+    padding-top: 1rem;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 if "logado" not in st.session_state:
     st.session_state["logado"] = False
 
